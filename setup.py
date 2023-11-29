@@ -17,5 +17,5 @@ setup(
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.9, <3.12',
 )
