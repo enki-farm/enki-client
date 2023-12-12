@@ -30,8 +30,12 @@ class ImageRequest(Request):
         Returns:
             InferInput: The input for inference.
         """
-        with open(self.image, "rb") as f:
-            data = f.read()
+        # pass url directly -> inference service will download
+        if self.image.startswith("http"):
+            data = self.image
+        else:
+            with open(self.image, "rb") as f:
+                data = f.read()
 
         input = InferInput(name="image", shape=[1], datatype="BYTES", data=[data])
         return input

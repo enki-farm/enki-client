@@ -68,3 +68,12 @@ class ImageEmbeddingModel(Model):
             output_type=response_types.EmbeddingResponse,
             endpoint="localhost:8080",
         )
+
+class ImageClassificationModel(Model):
+    def __init__(self):
+        super().__init__(
+            name="ImageClassificationModel",
+            input_type=request_types.ImageRequest,
+            output_type=response_types.ObjectResponse,
+            endpoint="localhost:8080",
+        )

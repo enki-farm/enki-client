@@ -1,6 +1,6 @@
 # enki-client
 
-! Please do not use this package yet. It is still under development and ultra dependency heavy.
+! Please do not use this package yet. It is still under development and ultra dependency heavy !
 
 ## Installation
 
